@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contatti — Lume Musulmano</title>
+<meta name="description" content="Contatta Lume Musulmano per informazioni sui corsi, iscrizioni e coaching. Scrivici e ti guideremo nel percorso più adatto a te.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo-scuro.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="tb-item">☎ <a href="tel:+393758826877">+39 375 882 6877</a></span>
+    <span class="tb-clock"><span class="dot-clock">🕐</span> <span id="clock-text">Roma —:—:—</span></span>
+    <span class="tb-item">✉ <a href="mailto:lume.musulmano@gmail.com">lume.musulmano@gmail.com</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <img class="mark-img" src="logo-scuro.png" alt="Lume Musulmano">
+      <span class="nome"><b>Lume Musulmano</b><small>نور المسلم · Sapere &amp; Fede</small></span>
+    </a>
+    <nav class="main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="corsi.html">Corsi</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li><a href="corsi.html#coaching">Coaching</a></li>
+        <li><a href="contatti.html" class="attivo">Contatti</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="corsi.html" class="btn btn-primario">Scopri i corsi</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <img src="logo-scuro.png" class="brand-badge glow-chiaro" alt="Lume Musulmano" style="width:110px;margin:0 auto 22px">
+    <span class="occhiello" style="justify-content:center;color:var(--oro-chiaro)">Siamo qui per te</span>
+    <h1>Contatti</h1>
+    <div class="bread"><a href="index.html">Home</a> · Contatti</div>
+  </div>
+</section>
+
+<section class="sezione">
+  <div class="wrap">
+    <div class="contatti-grid">
+
+      <div class="info-box reveal">
+        <h3>Parla con noi</h3>
+        <p style="color:rgba(247,243,233,.85);margin-bottom:28px">Hai domande sui corsi o vuoi un consiglio su dove iniziare? Scrivici: rispondiamo a tutti.</p>
+        <div class="riga">
+          <span class="ic">✉</span>
+          <div><b>Email</b><span>lume.musulmano@gmail.com</span></div>
+        </div>
+        <div class="riga">
+          <span class="ic">☎</span>
+          <div><b>Telefono / WhatsApp</b><span>+39 375 882 6877</span></div>
+        </div>
+        <div class="riga">
+          <span class="ic">🌍</span>
+          <div><b>Dove siamo</b><span>Corsi 100% online, ovunque tu sia</span></div>
+        </div>
+        <div class="riga">
+          <span class="ic">🕰</span>
+          <div><b>Orari</b><span>Lun–Ven, 9:00–18:00</span></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <h3 style="margin-bottom:8px">Scrivici un messaggio</h3>
+        <p style="color:var(--testo-soft);margin-bottom:26px;font-size:.95rem">Compila il modulo e ti ricontatteremo al più presto, in shaa Allah.</p>
+        <form id="form-contatti">
+          <div class="form-row">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+            </div>
+            <div class="campo">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="La tua email" required>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="corso">Corso di interesse</label>
+            <select id="corso" name="corso">
+                            <option value="">Seleziona un percorso…</option>
+              <option>Comprensione del Corano</option>
+              <option>Pensiero critico</option>
+              <option>Intelligenza emotiva</option>
+              <option>L'arte della Dawah</option>
+              <option>Escatologia islamica e religioni comparate</option>
+              <option>Surah Kahf SPECIAL</option>
+              <option>Sistema politico dell'Islam</option>
+              <option>Coaching individuale</option>
+              <option>Non so ancora, chiedo consiglio</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="messaggio">Messaggio</label>
+            <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui la tua domanda…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-scuro" style="width:100%;justify-content:center">Invia messaggio</button>
+          <p class="msg-ok" style="display:none;margin-top:18px;padding:14px 18px;background:var(--crema);border-radius:10px;color:var(--verde);font-weight:500">✓ Grazie! Il tuo messaggio è stato inviato. Ti ricontatteremo presto.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="sezione cta-finale" style="padding-top:60px;padding-bottom:60px">
+  <div class="wrap reveal">
+    <h2 style="font-size:clamp(1.6rem,3vw,2.4rem)">Seguici sui social</h2>
+    <p>Contenuti gratuiti, riflessioni e aggiornamenti sui nuovi corsi.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="#" class="btn btn-outline">Instagram</a>
+      <a href="#" class="btn btn-outline">YouTube</a>
+      <a href="#" class="btn btn-outline">Telegram</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="logo">
+          <img class="mark-img" src="logo-scuro.png" alt="Lume Musulmano">
+          <span class="nome"><b>Lume Musulmano</b><small>نور المسلم</small></span>
+        </div>
+        <p class="intro">Illuminare le menti, radicare i cuori. Sapere islamico autentico, in italiano.</p>
+        <div class="social"><a href="#">IG</a><a href="#">YT</a><a href="#">TG</a><a href="#">FB</a></div>
+      </div>
+                        <div>
+        <h4>Percorsi</h4>
+        <ul>
+          <li><a href="comprensione-corano.html">Comprensione del Corano</a></li>
+          <li><a href="pensiero-critico.html">Pensiero critico</a></li>
+          <li><a href="intelligenza-emotiva.html">Intelligenza emotiva</a></li>
+          <li><a href="arte-dawah.html">L'arte della Dawah</a></li>
+          <li><a href="escatologia.html">Escatologia islamica e religioni comparate</a></li>
+          <li><a href="surah-kahf.html">Surah Kahf SPECIAL</a></li>
+          <li><a href="sistema-politico.html">Sistema politico dell'Islam</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Lume Musulmano</h4>
+        <ul>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+          <li><a href="chi-siamo.html">Il nostro metodo</a></li>
+          <li><a href="corsi.html">Tutti i corsi</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <ul class="contatti">
+          <li>✉ <span>lume.musulmano@gmail.com</span></li>
+          <li>☎ <span>+39 375 882 6877</span></li>
+          <li>🌍 <span>Corsi online, ovunque tu sia</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="basso">
+      <span>© 2026 Lume Musulmano. Tutti i diritti riservati.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Termini</a> · <a href="#">Cookie</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
