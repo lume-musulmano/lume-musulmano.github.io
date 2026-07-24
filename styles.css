@@ -957,3 +957,22 @@ html.dark .stat-num { color: var(--oro-chiaro); }
    ========================================================= */
 html, body { overflow-x: hidden; max-width: 100%; }
 .sezione, .vision, .hero, .hero-corsi-wrap, footer.site, .missione-new-top, .maestria-grid, .dim { overflow-x: clip; }
+
+/* =========================================================
+   MOBILE HERO: video intero adattato allo schermo, senza testo,
+   corsi subito sotto (solo telefono, PC invariato)
+   ========================================================= */
+@media (max-width: 760px) {
+  .hero { min-height: 0; height: auto; display: block; padding: 0;
+          background: #060f21; overflow: hidden; }
+  /* il video diventa un blocco a tutta larghezza col fotogramma intero */
+  .hero-video { position: relative; inset: auto; width: 100%; height: auto;
+                object-fit: contain; display: block; z-index: 1; }
+  /* via sfondo animato, glow, overlay scuro e TUTTO il testo dell'hero */
+  .hero-fallback, .hero-glow2, .hero-overlay,
+  .hero .wrap, .hero .hero-testo { display: none !important; }
+  /* pulsante audio in basso a destra dentro il video */
+  .hero-mute { bottom: 12px; right: 12px; }
+  /* i corsi scendono subito SOTTO il video, senza sovrapposizione */
+  .hero-corsi-wrap { margin-top: 22px !important; }
+}
