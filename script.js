@@ -1,6 +1,45 @@
 /* LUME MUSULMANO — interazioni */
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* --- Preloader intro (solo home, una volta per sessione) --- */
+  const pre = document.getElementById('preloader');
+  if (pre && pre.style.display !== 'none') {
+    try { sessionStorage.setItem('lm_intro', '1'); } catch (e) {}
+    setTimeout(() => {
+      pre.classList.add('pre-hide');
+      document.documentElement.classList.remove('pre-lock');
+      setTimeout(() => { if (pre && pre.parentNode) pre.parentNode.removeChild(pre); }, 650);
+    }, 1650);
+  } else {
+    document.documentElement.classList.remove('pre-lock');
+  }
+
+  /* --- Tema chiaro/scuro --- */
+  var themeBtn = document.getElementById('theme-toggle');
+  function updThemeIcon() {
+    var d = document.documentElement.classList.contains('dark');
+    if (themeBtn) themeBtn.textContent = d ? '☀️' : '🌙';
+  }
+  updThemeIcon();
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      var dark = document.documentElement.classList.toggle('dark');
+      try { localStorage.setItem('lm_theme', dark ? 'dark' : 'light'); } catch (e) {}
+      updThemeIcon();
+    });
+  }
+
+  /* --- Video hero: pulsante audio --- */
+  var heroV = document.querySelector('.hero-video');
+  var heroM = document.getElementById('hero-mute');
+  if (heroV && heroM) {
+    heroM.addEventListener('click', function () {
+      heroV.muted = !heroV.muted;
+      heroM.textContent = heroV.muted ? '🔇' : '🔊';
+      if (!heroV.muted) { heroV.play().catch(function(){}); }
+    });
+  }
+
   /* --- Menu mobile --- */
   const burger = document.querySelector('.hamburger');
   const nav = document.querySelector('nav.main');
@@ -114,6 +153,25 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('drawn'); drawObs.unobserve(e.target); } });
   }, { threshold: .25 });
   document.querySelectorAll('.dim').forEach(el => drawObs.observe(el));
+
+  /* --- Numeri maestria: comparsa PROGRESSIVA legata allo scroll (ri-anima ogni volta) --- */
+  const bigNums = document.querySelectorAll('.big-num');
+  const maGrid = document.querySelector('.maestria-grid');
+  if (bigNums.length && maGrid) {
+    const updNums = () => {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      const r = maGrid.getBoundingClientRect();
+      const center = r.top + r.height / 2;
+      let p = (vh - center) / (vh * 0.5);   // 0 quando il centro e in basso, 1 quando arriva a meta schermo
+      p = p < 0 ? 0 : (p > 1 ? 1 : p);
+      const op = (0.35 + p * 0.65).toFixed(3);        // da parziale a pieno
+      const tx = ((1 - p) * 90).toFixed(1);           // slide da destra
+      bigNums.forEach(el => { el.style.opacity = op; el.style.transform = 'translate(' + tx + 'px, -50%)'; });
+    };
+    window.addEventListener('scroll', updNums, { passive: true });
+    window.addEventListener('resize', updNums);
+    updNums();
+  }
 
   /* --- Header shadow on scroll --- */
   const header = document.querySelector('header.site');
