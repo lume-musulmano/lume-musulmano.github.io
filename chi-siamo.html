@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chi siamo — Lume Musulmano</title>
-<meta name="description" content="La missione, i valori e il metodo di Lume Musulmano: sapere islamico autentico in italiano, radicato nella tradizione e vicino alla comunità di oggi.">
+<meta name="description" content="La storia, la missione e i valori di Lume Musulmano: sapere islamico autentico in italiano, per comprendere davvero il Corano e formare una mente musulmana solida.">
+<link rel="icon" type="image/png" href="logo-scuro.png">
+<script>(function(){try{if(localStorage.getItem('lm_theme')!=='light'){document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="logo-scuro.png">
-<script>(function(){try{if(localStorage.getItem('lm_theme')!=='light'){document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,92 +26,89 @@
   <div class="wrap">
     <a href="index.html" class="logo">
       <img class="mark-img logo-light-mode" src="logo-scuro.png" alt="Lume Musulmano"><img class="mark-img logo-dark-mode" src="logo-chiaro.png" alt="Lume Musulmano">
-      <span class="nome"><b>Lume Musulmano</b><small>نور المسلم · Sapere &amp; Fede</small></span>
+      <span class="nome"><b>Lume Musulmano</b><small>Accademia</small></span>
     </a>
     <nav class="main">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="corsi.html">Corsi</a></li>
         <li><a href="chi-siamo.html" class="attivo">Chi siamo</a></li>
-        <li><a href="corsi.html#coaching">Coaching</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
         <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="has-drop">
+          <a href="#" class="drop-toggle" onclick="return false">Altro</a>
+          <div class="drop-menu">
+            <a href="faq.html">Domande frequenti</a>
+            <a href="coaching.html">Coaching</a>
+            <div class="drop-sep"></div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookie.html">Cookie Policy</a>
+            <a href="termini.html">Termini di servizio</a>
+            <a href="condizioni-vendita.html">Condizioni di vendita</a>
+            <div class="drop-sep"></div>
+            <div class="drop-social">
+              <a href="https://www.youtube.com/@LumeMusulmano" target="_blank" rel="noopener">YouTube</a>
+              <a href="https://www.instagram.com/lume.musulmano" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.tiktok.com/@lume.musulmano" target="_blank" rel="noopener">TikTok</a>
+              <a href="https://x.com/Lume_Musulmano" target="_blank" rel="noopener">X</a>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
     <div class="header-cta">
-      <a href="corsi.html" class="btn btn-primario">Scopri i corsi</a>
+      <button class="icon-btn" id="search-btn" aria-label="Cerca" title="Cerca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></button>
+      <a href="accedi.html" class="btn btn-accedi">Accedi</a>
       <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">☀️</button>
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
-<section class="page-hero">
-  <div class="wrap">
-    <img src="logo-scuro.png" class="brand-badge glow-chiaro" alt="Lume Musulmano" style="width:110px;margin:0 auto 22px">
-    <span class="occhiello" style="justify-content:center;color:var(--oro-chiaro)">La nostra storia</span>
-    <h1>Chi siamo</h1>
-    <div class="bread"><a href="index.html">Home</a> · Chi siamo</div>
-  </div>
-</section>
-
-<!-- Missione -->
-<section class="sezione">
+<!-- Intestazione: storia & missione (stile modello) -->
+<section class="sezione about-hero">
   <div class="wrap">
     <div class="split">
       <div class="split-testo reveal">
-        <span class="occhiello">La nostra missione</span>
-        <h2>Riportare la luce del sapere nella lingua di casa</h2>
-        <p>Lume Musulmano nasce per colmare un vuoto: la mancanza di una formazione islamica seria, profonda e strutturata in lingua italiana. Troppo spesso il sapere resta frammentato tra fonti sparse, traduzioni approssimative e contenuti superficiali.</p>
-        <p>Vogliamo offrire un luogo dove studiare il Corano, la Seerah e i fondamenti della fede con lo stesso rigore degli studiosi classici, ma con la chiarezza di una didattica pensata per chi vive oggi, in Italia e in Europa.</p>
+        <div class="bread"><a href="index.html">Home</a> · Chi siamo</div>
+        <span class="occhiello">Chi siamo</span>
+        <h1>La nostra storia e la nostra missione</h1>
+        <p class="about-tagline">Coltivare conoscenza, carattere e scopo — per le generazioni che verranno.</p>
+        <p class="about-intro">Lume Musulmano esiste per formare una comunità di musulmani di lingua italiana dotati della lucidità, della conoscenza e delle competenze per restare saldi e giusti nelle sfide del nostro tempo — e nei cent'anni che verranno.</p>
       </div>
       <div class="split-img reveal">
-        <div class="placeholder"><span>نور</span></div>
+        <div class="foto-fondatore" role="img" aria-label="Il fondatore di Lume Musulmano davanti alla Cupola della Roccia, a Gerusalemme"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Valori -->
+<!-- La nostra storia -->
 <section class="sezione" style="background:var(--crema-scuro)">
   <div class="wrap">
     <div class="titolo-sezione reveal">
-      <span class="occhiello">Ciò in cui crediamo</span>
-      <h2>I nostri valori</h2>
+      <span class="occhiello">Come è iniziato tutto</span>
+      <h2>La nostra storia</h2>
     </div>
-    <div class="valori-grid">
-      <div class="valore reveal">
-        <div class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></svg></div>
-        <h3>Autenticità</h3>
-        <p>Ogni contenuto è fondato sul Corano, sulla Sunnah e sulla comprensione degli studiosi affidabili, senza distorsioni né semplificazioni.</p>
-      </div>
-      <div class="valore reveal">
-        <div class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <h3>Chiarezza</h3>
-        <p>Trasformiamo concetti complessi in percorsi accessibili, con un linguaggio semplice e un metodo graduale, rispettoso dei tempi di ognuno.</p>
-      </div>
-      <div class="valore reveal">
-        <div class="icona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Comunità</h3>
-        <p>Non solo lezioni, ma una comunità di studenti che cresce insieme, si sostiene e condivide un cammino di fede e conoscenza.</p>
-      </div>
+    <div class="prosa-centro reveal">
+      <p>Tutto è iniziato da una scoperta. Per molti l'Islam è una tradizione ereditata, vissuta per abitudine o per cultura, senza coglierne davvero il perché. Poi il Corano entra in profondità: cambia il mondo interiore, dà scopo e visione, e trasforma una fede subìta in una fede compresa, scelta e amata.</p>
+      <p>Lume Musulmano nasce da questo risveglio. Da un'esperienza personale è cresciuta una convinzione semplice: nessuno dovrebbe restare lontano da questo sapere solo perché non lo trova nella propria lingua. Vogliamo rendere la comprensione del Corano e delle scienze islamiche accessibile a chi pensa, vive e prega in italiano.</p>
     </div>
   </div>
 </section>
 
-<!-- Metodo -->
+<!-- La nostra missione -->
 <section class="sezione">
   <div class="wrap">
-    <div class="split inv">
-      <div class="split-img reveal">
-        <div class="placeholder"><span>علم</span></div>
-      </div>
-      <div class="split-testo reveal">
-        <span class="occhiello">Come insegniamo</span>
-        <h2>Il nostro metodo</h2>
-        <p><b>1. Dalle basi.</b> Ogni percorso parte da zero e non dà nulla per scontato: costruiamo fondamenta solide prima di procedere.</p>
-        <p><b>2. Dal testo alla vita.</b> Non ci fermiamo alla teoria: colleghiamo sempre il sapere alla pratica quotidiana e al contesto in cui viviamo.</p>
-        <p><b>3. Con accompagnamento.</b> Docenti disponibili, lezioni dal vivo e materiale sempre accessibile, per non lasciare mai indietro nessuno.</p>
-      </div>
+    <div class="titolo-sezione reveal">
+      <span class="occhiello">Dove vogliamo arrivare</span>
+      <h2>La nostra missione</h2>
+    </div>
+    <div class="prosa-centro reveal">
+      <p>Immaginiamo Lume Musulmano come una comunità di apprendimento che dura tutta la vita, destinata a crescere e maturare nel corso del prossimo secolo: è il nostro «piano di 100 anni».</p>
+      <p>Il nostro obiettivo non è solo trasmettere nozioni, ma formare persone: musulmani radicati nella propria identità, capaci di pensare con lucidità e di agire con giustizia e competenza in un mondo spesso confuso e corrotto. Con la conoscenza giusta e le competenze giuste, vogliamo che ogni studente sappia restare saldo e retto, e contribuire al bene attorno a sé.</p>
+      <p>Aspiriamo a essere più di una scuola: un punto di riferimento che coltiva generazioni capaci di comprendere chi sono, perché imparano e come lasciare il mondo migliore di come l'hanno trovato.</p>
     </div>
   </div>
 </section>
@@ -119,19 +116,55 @@
 <!-- Numeri -->
 <section class="sezione" style="background:var(--crema-scuro)">
   <div class="wrap">
+    <div class="titolo-sezione reveal">
+      <span class="occhiello">In breve</span>
+      <h2>Lume Musulmano in numeri</h2>
+    </div>
     <div class="contatori" style="margin-top:0">
-      <div class="contatore"><b data-conta="1500" data-suffisso="+">0</b><span>Studenti</span></div>
-      <div class="contatore"><b data-conta="5" data-suffisso="+">0</b><span>Percorsi</span></div>
-      <div class="contatore"><b data-conta="8" data-suffisso="+">0</b><span>Docenti</span></div>
+      <div class="contatore"><b data-conta="8" data-suffisso="">0</b><span>Corsi</span></div>
+      <div class="contatore"><b data-conta="3" data-suffisso="">0</b><span>Aree di studio</span></div>
+      <div class="contatore"><b data-conta="100" data-suffisso="%">0</b><span>In italiano</span></div>
       <div class="contatore"><b data-conta="95" data-suffisso="%">0</b><span>Soddisfazione</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonianze -->
+<section class="sezione testimonianze">
+  <div class="wrap">
+    <div class="titolo-sezione reveal">
+      <span class="occhiello">Le voci degli studenti</span>
+      <h2>Chi ha ritrovato la propria luce</h2>
+    </div>
+    <div class="tst-grid">
+      <div class="tst reveal">
+        <div class="stelle">★★★★★</div>
+        <p>«Finalmente ho capito il perché di ciò che recito ogni giorno. Il Corano non è più solo suono: è significato che mi accompagna.»</p>
+        <div class="autore"><span class="avatar">Y</span><div><b>Yusuf R.</b><small>Comprensione del Corano</small></div></div>
+      </div>
+      <div class="tst reveal">
+        <div class="stelle">★★★★★</div>
+        <p>«Credevo di avere già la fede. Qui ho imparato a comprenderla davvero, non solo a praticarla per abitudine.»</p>
+        <div class="autore"><span class="avatar">A</span><div><b>Amina B.</b><small>Studentessa</small></div></div>
+      </div>
+      <div class="tst reveal">
+        <div class="stelle">★★★★★</div>
+        <p>«Lezioni chiare, rigorose e vicine alla vita di oggi. Ogni percorso mi lascia qualcosa su cui riflettere per giorni.»</p>
+        <div class="autore"><span class="avatar">K</span><div><b>Karim T.</b><small>Pensiero critico</small></div></div>
+      </div>
+      <div class="tst reveal">
+        <div class="stelle">★★★★★</div>
+        <p>«Contenuti seri, in italiano, senza scorciatoie. Esattamente ciò che cercavo da anni e non trovavo.»</p>
+        <div class="autore"><span class="avatar">S</span><div><b>Sara M.</b><small>L'arte della Dawah</small></div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="sezione cta-finale">
   <div class="wrap reveal">
-    <h2>Fai parte di questo cammino</h2>
-    <p>Unisciti a chi ha scelto di illuminare la propria conoscenza con Lume Musulmano.</p>
+    <h2>Unisciti a questo cammino</h2>
+    <p>Fai il primo passo: scegli il tuo percorso e inizia a comprendere davvero ciò in cui credi.</p>
     <a href="corsi.html" class="btn btn-primario">Scopri i percorsi</a>
   </div>
 </section>
@@ -157,6 +190,7 @@
           <li><a href="escatologia.html">Escatologia islamica e religioni comparate</a></li>
           <li><a href="surah-kahf.html">Surah Kahf SPECIAL</a></li>
           <li><a href="sistema-politico.html">Sistema politico dell'Islam</a></li>
+          <li><a href="musulmano-intellettuale.html">Musulmano Intellettuale</a></li>
         </ul>
       </div>
       <div>
@@ -179,7 +213,7 @@
     </div>
     <div class="basso">
       <span>© 2026 Lume Musulmano. Tutti i diritti riservati.</span>
-      <span><a href="#">Privacy</a> · <a href="#">Termini</a> · <a href="#">Cookie</a></span>
+      <span><a href="privacy.html">Privacy</a> · <a href="termini.html">Termini</a> · <a href="cookie.html">Cookie</a></span>
     </div>
   </div>
 </footer>

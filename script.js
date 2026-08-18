@@ -216,3 +216,98 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* ===== Banner cookie (accetta / rifiuta) ===== */
+(function(){
+  var KEY='lm_cookie';
+  try{ if(localStorage.getItem(KEY)) return; }catch(e){}
+  function init(){
+    if(document.getElementById('cookie-banner')) return;
+    var b=document.createElement('div');
+    b.id='cookie-banner'; b.className='cookie-banner'; b.setAttribute('role','dialog'); b.setAttribute('aria-label','Avviso cookie');
+    b.innerHTML='<div class="ck-inner"><p>Usiamo cookie tecnici necessari e, con il tuo consenso, cookie statistici per migliorare il sito. Dettagli nella <a href="cookie.html">Cookie Policy</a>.</p><div class="ck-actions"><button type="button" class="ck-btn ck-no">Rifiuta</button><button type="button" class="ck-btn ck-yes">Accetta</button></div></div>';
+    document.body.appendChild(b);
+    requestAnimationFrame(function(){ b.classList.add('show'); });
+    function choose(v){ try{localStorage.setItem(KEY,v);}catch(e){} b.classList.remove('show'); setTimeout(function(){ if(b.parentNode) b.parentNode.removeChild(b); },320); }
+    b.querySelector('.ck-yes').addEventListener('click',function(){ choose('accept'); });
+    b.querySelector('.ck-no').addEventListener('click',function(){ choose('reject'); });
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',init); } else { init(); }
+})();
+
+/* ===== Ricerca + tab login ===== */
+(function(){
+  var idx=[
+   {t:'Nuovo Musulmano',u:'nuovo-musulmano.html',s:'Base · €14,99/mese'},
+   {t:'Comprensione del Corano',u:'comprensione-corano.html',s:'Corso · €9/mese'},
+   {t:'Pensiero critico',u:'pensiero-critico.html',s:'Corso · €19/mese'},
+   {t:'Intelligenza emotiva',u:'intelligenza-emotiva.html',s:'Corso · €19/mese'},
+   {t:"L'arte della Dawah",u:'arte-dawah.html',s:'Corso · €499'},
+   {t:'Escatologia islamica e religioni comparate',u:'escatologia.html',s:'Corso · €199'},
+   {t:'Surah Kahf SPECIAL',u:'surah-kahf.html',s:'Corso · €199'},
+   {t:"Sistema politico dell'Islam",u:'sistema-politico.html',s:'Corso · €19/mese'},
+   {t:'Musulmano Intellettuale',u:'musulmano-intellettuale.html',s:'Apologetica · €199'},
+   {t:'Tutti i corsi',u:'corsi.html',s:'Catalogo'},
+   {t:'Coaching',u:'coaching.html',s:'Coaching 1-a-1'},
+   {t:'Chi siamo',u:'chi-siamo.html',s:'Storia e missione'},
+   {t:'Contatti',u:'contatti.html',s:'Scrivici'},
+   {t:'Domande frequenti',u:'faq.html',s:'FAQ'},
+   {t:'Area personale',u:'accedi.html',s:'Accedi / Registrati'},
+   {t:'Privacy Policy',u:'privacy.html',s:'Note legali'},
+   {t:'Cookie Policy',u:'cookie.html',s:'Note legali'},
+   {t:'Termini di servizio',u:'termini.html',s:'Note legali'},
+   {t:'Condizioni di vendita',u:'condizioni-vendita.html',s:'Note legali'}
+  ];
+  var btn=document.getElementById('search-btn');
+  if(btn){
+    var ov=document.createElement('div'); ov.id='search-overlay';
+    ov.innerHTML='<div class="search-box"><input type="search" id="search-input" placeholder="Cerca corsi e pagine…" autocomplete="off"><div class="search-results" id="search-results"></div></div>';
+    document.body.appendChild(ov);
+    var input=ov.querySelector('#search-input'), res=ov.querySelector('#search-results');
+    function render(q){ q=(q||'').trim().toLowerCase();
+      var list=q? idx.filter(function(i){return (i.t+' '+i.s).toLowerCase().indexOf(q)>-1;}):idx;
+      res.innerHTML = list.length? list.map(function(i){return '<a href="'+i.u+'">'+i.t+'<small>'+i.s+'</small></a>';}).join('') : '<div class="search-empty">Nessun risultato.</div>';
+    }
+    function open(){ ov.classList.add('open'); input.value=''; render(''); setTimeout(function(){input.focus();},30); }
+    function close(){ ov.classList.remove('open'); }
+    btn.addEventListener('click',open);
+    input.addEventListener('input',function(){render(input.value);});
+    ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  }
+  var tabs=document.querySelectorAll('.auth-tab, .to-signup, .to-login');
+  if(tabs.length){
+    function show(which){
+      document.querySelectorAll('.auth-tab').forEach(function(t){ t.classList.toggle('attivo', t.getAttribute('data-auth')===which); });
+      var l=document.getElementById('form-login'), s=document.getElementById('form-signup');
+      if(l&&s){ l.style.display=which==='login'?'block':'none'; s.style.display=which==='signup'?'block':'none'; }
+    }
+    tabs.forEach(function(t){ t.addEventListener('click',function(e){ e.preventDefault(); show(t.getAttribute('data-auth')); }); });
+  }
+})();
+
+/* ===== Filtro corsi per livello ===== */
+(function(){
+  var btns=document.querySelectorAll('.filtro-liv');
+  if(!btns.length) return;
+  var blocchi=document.querySelectorAll('.livello-blocco');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.classList.remove('attivo');});
+      b.classList.add('attivo');
+      var liv=b.getAttribute('data-liv');
+      blocchi.forEach(function(bl){
+        bl.style.display=(liv==='tutti'||bl.getAttribute('data-liv')===liv)?'':'none';
+      });
+    });
+  });
+})();
+
+/* ===== Menu 'Altro' a fisarmonica su mobile ===== */
+(function(){
+  document.querySelectorAll('nav.main .has-drop > .drop-toggle').forEach(function(t){
+    t.addEventListener('click', function(e){
+      if(window.innerWidth<=900){ e.preventDefault(); e.stopPropagation(); t.parentNode.classList.toggle('open'); }
+    });
+  });
+})();

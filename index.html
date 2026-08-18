@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lume Musulmano — Comprendere il Corano e formare la mente del musulmano</title>
 <meta name="description" content="Lume Musulmano: corsi in italiano per comprendere il Corano, pensiero critico, intelligenza emotiva, arte della da'wah e formazione intellettuale islamica. Illumina la tua conoscenza.">
+<link rel="icon" type="image/png" href="logo-scuro.png">
+<script>(function(){try{if(localStorage.getItem('lm_theme')!=='light'){document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@400;500;600;700&family=Amiri:wght@400;700&family=Anton&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="logo-scuro.png">
-<script>(function(){try{if(localStorage.getItem('lm_theme')!=='light'){document.documentElement.classList.add('dark');}}catch(e){document.documentElement.classList.add('dark');}})();</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -40,19 +40,40 @@
   <div class="wrap">
     <a href="index.html" class="logo">
       <img class="mark-img logo-light-mode" src="logo-scuro.png" alt="Lume Musulmano"><img class="mark-img logo-dark-mode" src="logo-chiaro.png" alt="Lume Musulmano">
-      <span class="nome"><b>Lume Musulmano</b><small>نور المسلم · Sapere &amp; Fede</small></span>
+      <span class="nome"><b>Lume Musulmano</b><small>Accademia</small></span>
     </a>
     <nav class="main">
       <ul>
         <li><a href="index.html" class="attivo">Home</a></li>
         <li><a href="corsi.html">Corsi</a></li>
         <li><a href="chi-siamo.html">Chi siamo</a></li>
-        <li><a href="corsi.html#coaching">Coaching</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
         <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="has-drop">
+          <a href="#" class="drop-toggle" onclick="return false">Altro</a>
+          <div class="drop-menu">
+            <a href="faq.html">Domande frequenti</a>
+            <a href="coaching.html">Coaching</a>
+            <div class="drop-sep"></div>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="cookie.html">Cookie Policy</a>
+            <a href="termini.html">Termini di servizio</a>
+            <a href="condizioni-vendita.html">Condizioni di vendita</a>
+            <div class="drop-sep"></div>
+            <div class="drop-social">
+              <a href="https://www.youtube.com/@LumeMusulmano" target="_blank" rel="noopener">YouTube</a>
+              <a href="https://www.instagram.com/lume.musulmano" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.tiktok.com/@lume.musulmano" target="_blank" rel="noopener">TikTok</a>
+              <a href="https://x.com/Lume_Musulmano" target="_blank" rel="noopener">X</a>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
     <div class="header-cta">
-      <a href="corsi.html" class="btn btn-primario">Scopri i corsi</a>
+      <button class="icon-btn" id="search-btn" aria-label="Cerca" title="Cerca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></button>
+      <a href="accedi.html" class="btn btn-accedi">Accedi</a>
       <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">☀️</button>
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -71,11 +92,10 @@
   <div class="wrap">
     <div class="hero-testo reveal">
       <span class="occhiello">Illumina la tua conoscenza</span>
-      <h1>Comprendere il <span class="oro">Corano</span> e coltivare una mente musulmana solida</h1>
-      <p class="lead">Lume Musulmano offre percorsi in italiano per comprendere il Corano, sviluppare pensiero critico e intelligenza emotiva, padroneggiare l'arte della da'wah e formare una mente musulmana solida e consapevole.</p>
+      <h1>Apprendimento <span class="oro">online</span> personalizzato per costruire Pensiero, Eloquenza e Competenza</h1>
+      <p class="lead">All'Accademia Lume Musulmano non ci limitiamo a insegnare: formiamo pensatori, guide e persone capaci di fare la differenza. Radicati nei valori islamici e sostenuti da una didattica moderna, i nostri percorsi in italiano — dalla comprensione del Corano al pensiero critico, dalle scienze islamiche all'apologetica — preparano gli studenti a vivere con scopo, guardando ai prossimi 100 anni.</p>
       <div class="hero-actions">
         <a href="corsi.html" class="btn btn-primario">Esplora i percorsi</a>
-        <a href="chi-siamo.html" class="btn btn-outline">Il nostro metodo</a>
       </div>
     </div>
   </div>
@@ -105,7 +125,13 @@
         </a>
         <a class="cover-card" href="sistema-politico.html">
           <img src="cover-sistema-politico.jpg?v=3" alt="Sistema politico dell'Islam">
+        </a>        <a class="cover-card" href="musulmano-intellettuale.html">
+          <span class="pc-img cover-musulmano-int" role="img" aria-label="Musulmano Intellettuale"></span>
         </a>
+        <a class="cover-card" href="nuovo-musulmano.html">
+          <span class="pc-img cover-nuovo-musulmano" role="img" aria-label="Nuovo Musulmano"></span>
+        </a>
+
         <a class="cover-card" href="comprensione-corano.html">
           <span class="pc-img cover-c-corano" role="img" aria-label="Comprensione del Corano"></span>
         </a>
@@ -126,7 +152,13 @@
         </a>
         <a class="cover-card" href="sistema-politico.html">
           <img src="cover-sistema-politico.jpg?v=3" alt="Sistema politico dell'Islam">
+        </a>        <a class="cover-card" href="musulmano-intellettuale.html">
+          <span class="pc-img cover-musulmano-int" role="img" aria-label="Musulmano Intellettuale"></span>
         </a>
+        <a class="cover-card" href="nuovo-musulmano.html">
+          <span class="pc-img cover-nuovo-musulmano" role="img" aria-label="Nuovo Musulmano"></span>
+        </a>
+
     </div>
   </div>
   <div class="wrap" style="text-align:center;margin-top:30px">
@@ -221,50 +253,33 @@
       <span class="occhiello">Le voci degli studenti</span>
       <h2>Storie di chi ha ritrovato la propria luce</h2>
     </div>
-    <div class="tst-grid">
-      <div class="tst reveal">
-        <div class="stelle">★★★★★</div>
-        <p>«Finalmente un corso serio in italiano. Ho capito il significato di ciò che recito ogni giorno nella preghiera. Non tornerei più indietro.»</p>
-        <div class="autore"><span class="avatar">Y</span><div><b>Yusuf R.</b><small>Corso di Tafsir</small></div></div>
-      </div>
-      <div class="tst reveal">
-        <div class="stelle">★★★★★</div>
-        <p>«La Seerah spiegata così non l'avevo mai sentita. Ogni lezione mi lascia qualcosa su cui riflettere per giorni. Docenti preparati e disponibili.»</p>
-        <div class="autore"><span class="avatar">A</span><div><b>Amina B.</b><small>Corso di Seerah</small></div></div>
-      </div>
-      <div class="tst reveal">
-        <div class="stelle">★★★★★</div>
-        <p>«Ho iniziato l'arabo da zero. In pochi mesi riesco a leggere il Corano e riconoscere le parole. Un metodo chiaro e rispettoso dei tempi di ognuno.»</p>
-        <div class="autore"><span class="avatar">K</span><div><b>Karim T.</b><small>Lingua Araba</small></div></div>
-      </div>
-    </div>
   </div>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section class="sezione">
-  <div class="wrap">
-    <div class="titolo-sezione reveal">
-      <span class="occhiello">Domande frequenti</span>
-      <h2>Tutto ciò che c'è da sapere</h2>
-    </div>
-    <div class="faq-lista">
-      <div class="faq-item">
-        <button class="faq-q">A chi sono rivolti i corsi? <span class="segno">+</span></button>
-        <div class="faq-a"><p>A tutti: da chi si avvicina all'Islam per la prima volta a chi desidera approfondire. I percorsi partono dalle basi e non richiedono conoscenze pregresse.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Le lezioni sono in italiano? <span class="segno">+</span></button>
-        <div class="faq-a"><p>Sì, tutti i corsi sono interamente in lingua italiana. I testi arabi vengono sempre traslitterati e tradotti per renderli accessibili a chiunque.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Come si svolgono i corsi? <span class="segno">+</span></button>
-        <div class="faq-a"><p>I corsi sono 100% online, con lezioni dal vivo e materiale registrato accessibile in qualsiasi momento, da qualunque parte del mondo.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Serve un abbonamento? <span class="segno">+</span></button>
-        <div class="faq-a"><p>Puoi scegliere il singolo percorso o un abbonamento che dà accesso a più corsi. Sono disponibili opzioni flessibili e agevolazioni. Contattaci per i dettagli.</p></div>
-      </div>
+  <div class="tst-marquee">
+    <div class="tst-track">
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Finalmente ho capito il significato di ciò che recito ogni giorno nella preghiera. Il Corano non è più solo suono: è luce che mi guida.»</p><div class="autore"><span class="avatar">Y</span><div><b>Yusuf R.</b><small>Comprensione del Corano</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Ho imparato a conoscere me stessa prima ancora degli altri. Un percorso che mi ha cambiata dentro.»</p><div class="autore"><span class="avatar">A</span><div><b>Amina B.</b><small>Intelligenza emotiva</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Ora distinguo un argomento solido da uno debole. Penso con più lucidità, dentro e fuori la fede.»</p><div class="autore"><span class="avatar">K</span><div><b>Karim T.</b><small>Pensiero critico</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Ho imparato a parlare della mia fede con calma e chiarezza, senza paura e senza aggressività.»</p><div class="autore"><span class="avatar">S</span><div><b>Sara M.</b><small>L'arte della Dawah</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Un quadro chiaro, basato sulle fonti, in un mare di opinioni confuse. Davvero illuminante.»</p><div class="autore"><span class="avatar">I</span><div><b>Ibrahim L.</b><small>Sistema politico dell'Islam</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Ogni venerdì ora recito la Surah Kahf comprendendola davvero. Non tornerei più indietro.»</p><div class="autore"><span class="avatar">K</span><div><b>Khadija N.</b><small>Surah Kahf SPECIAL</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Domande che mi porto dietro da anni hanno finalmente trovato risposte serie e documentate.»</p><div class="autore"><span class="avatar">O</span><div><b>Omar F.</b><small>Escatologia islamica</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Studiare in italiano, con rigore, ha reso tutto più vicino. Sento la mia fede più mia.»</p><div class="autore"><span class="avatar">F</span><div><b>Fatima Z.</b><small>Comprensione del Corano</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Lezioni che ti costringono a ragionare. Esco da ogni modulo con qualcosa su cui riflettere.»</p><div class="autore"><span class="avatar">B</span><div><b>Bilal A.</b><small>Pensiero critico</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Ho iscritto me e mia figlia. Ora a casa parliamo di ciò che impariamo: ha unito la nostra famiglia.»</p><div class="autore"><span class="avatar">N</span><div><b>Nadia H.</b><small>Genitore</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Ho ritrovato equilibrio e pazienza. Qui la conoscenza non riempie solo la testa, ma anche il cuore.»</p><div class="autore"><span class="avatar">H</span><div><b>Hamza D.</b><small>Intelligenza emotiva</small></div></div></div>
+      <div class="tst"><div class="stelle">★★★★★</div><p>«Contenuti seri, in italiano, senza scorciatoie. Esattamente ciò che cercavo da anni.»</p><div class="autore"><span class="avatar">M</span><div><b>Maryam S.</b><small>L'arte della Dawah</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Finalmente ho capito il significato di ciò che recito ogni giorno nella preghiera. Il Corano non è più solo suono: è luce che mi guida.»</p><div class="autore"><span class="avatar">Y</span><div><b>Yusuf R.</b><small>Comprensione del Corano</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Ho imparato a conoscere me stessa prima ancora degli altri. Un percorso che mi ha cambiata dentro.»</p><div class="autore"><span class="avatar">A</span><div><b>Amina B.</b><small>Intelligenza emotiva</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Ora distinguo un argomento solido da uno debole. Penso con più lucidità, dentro e fuori la fede.»</p><div class="autore"><span class="avatar">K</span><div><b>Karim T.</b><small>Pensiero critico</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Ho imparato a parlare della mia fede con calma e chiarezza, senza paura e senza aggressività.»</p><div class="autore"><span class="avatar">S</span><div><b>Sara M.</b><small>L'arte della Dawah</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Un quadro chiaro, basato sulle fonti, in un mare di opinioni confuse. Davvero illuminante.»</p><div class="autore"><span class="avatar">I</span><div><b>Ibrahim L.</b><small>Sistema politico dell'Islam</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Ogni venerdì ora recito la Surah Kahf comprendendola davvero. Non tornerei più indietro.»</p><div class="autore"><span class="avatar">K</span><div><b>Khadija N.</b><small>Surah Kahf SPECIAL</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Domande che mi porto dietro da anni hanno finalmente trovato risposte serie e documentate.»</p><div class="autore"><span class="avatar">O</span><div><b>Omar F.</b><small>Escatologia islamica</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Studiare in italiano, con rigore, ha reso tutto più vicino. Sento la mia fede più mia.»</p><div class="autore"><span class="avatar">F</span><div><b>Fatima Z.</b><small>Comprensione del Corano</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Lezioni che ti costringono a ragionare. Esco da ogni modulo con qualcosa su cui riflettere.»</p><div class="autore"><span class="avatar">B</span><div><b>Bilal A.</b><small>Pensiero critico</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Ho iscritto me e mia figlia. Ora a casa parliamo di ciò che impariamo: ha unito la nostra famiglia.»</p><div class="autore"><span class="avatar">N</span><div><b>Nadia H.</b><small>Genitore</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Ho ritrovato equilibrio e pazienza. Qui la conoscenza non riempie solo la testa, ma anche il cuore.»</p><div class="autore"><span class="avatar">H</span><div><b>Hamza D.</b><small>Intelligenza emotiva</small></div></div></div>
+      <div class="tst" aria-hidden="true"><div class="stelle">★★★★★</div><p>«Contenuti seri, in italiano, senza scorciatoie. Esattamente ciò che cercavo da anni.»</p><div class="autore"><span class="avatar">M</span><div><b>Maryam S.</b><small>L'arte della Dawah</small></div></div></div>
     </div>
   </div>
 </section>
@@ -346,6 +361,25 @@
             <div class="pc-foot"><span class="pc-price">€19<small>/mese</small></span><a href="sistema-politico.html" class="pc-btn">Iscriviti</a></div>
           </div>
         </article>
+      <article class="photo-card" data-cat="apologetica">
+        <span class="pc-img cover-musulmano-int" role="img" aria-label="Musulmano Intellettuale"></span>
+        <span class="pc-tag">Apologetica</span>
+        <div class="pc-body">
+          <h3>Musulmano Intellettuale</h3>
+          <div class="pc-meta"><span>&#9672; Avanzato</span><span>&#9684; 50+ risposte</span><span>&#128179; Una tantum</span></div>
+          <div class="pc-foot"><span class="pc-price">&euro;199</span><a href="musulmano-intellettuale.html" class="pc-btn">Iscriviti</a></div>
+        </div>
+      </article>
+        <article class="photo-card">
+          <span class="pc-img cover-nuovo-musulmano" role="img" aria-label="Nuovo Musulmano"></span>
+          <span class="pc-tag">Da dove iniziare</span>
+          <div class="pc-body">
+            <h3>Nuovo Musulmano</h3>
+            <div class="pc-meta"><span>◈ Base</span><span>◔ 8 moduli</span><span>💳 Mensile</span></div>
+            <div class="pc-foot"><span class="pc-price">€14,99<small>/mese</small></span><a href="nuovo-musulmano.html" class="pc-btn">Iscriviti</a></div>
+          </div>
+        </article>
+
         <article class="photo-card" data-cat="corano">
           <span class="pc-img cover-c-corano" role="img" aria-label="Comprensione del Corano"></span>
           <span class="pc-tag">Corano</span>
@@ -409,6 +443,25 @@
             <div class="pc-foot"><span class="pc-price">€19<small>/mese</small></span><a href="sistema-politico.html" class="pc-btn">Iscriviti</a></div>
           </div>
         </article>
+      <article class="photo-card" data-cat="apologetica">
+        <span class="pc-img cover-musulmano-int" role="img" aria-label="Musulmano Intellettuale"></span>
+        <span class="pc-tag">Apologetica</span>
+        <div class="pc-body">
+          <h3>Musulmano Intellettuale</h3>
+          <div class="pc-meta"><span>&#9672; Avanzato</span><span>&#9684; 50+ risposte</span><span>&#128179; Una tantum</span></div>
+          <div class="pc-foot"><span class="pc-price">&euro;199</span><a href="musulmano-intellettuale.html" class="pc-btn">Iscriviti</a></div>
+        </div>
+      </article>
+        <article class="photo-card">
+          <span class="pc-img cover-nuovo-musulmano" role="img" aria-label="Nuovo Musulmano"></span>
+          <span class="pc-tag">Da dove iniziare</span>
+          <div class="pc-body">
+            <h3>Nuovo Musulmano</h3>
+            <div class="pc-meta"><span>◈ Base</span><span>◔ 8 moduli</span><span>💳 Mensile</span></div>
+            <div class="pc-foot"><span class="pc-price">€14,99<small>/mese</small></span><a href="nuovo-musulmano.html" class="pc-btn">Iscriviti</a></div>
+          </div>
+        </article>
+
         </div>
       </div>
       <button class="car-arrow car-next" aria-label="Corso successivo">›</button>
@@ -416,6 +469,34 @@
   </div>
   <div class="wrap" style="text-align:center;margin-top:40px">
     <a href="corsi.html" class="btn btn-primario">Vedi tutti i corsi</a>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="sezione">
+  <div class="wrap">
+    <div class="titolo-sezione reveal">
+      <span class="occhiello">Domande frequenti</span>
+      <h2>Tutto ciò che c'è da sapere</h2>
+    </div>
+    <div class="faq-lista">
+      <div class="faq-item">
+        <button class="faq-q">A chi sono rivolti i corsi? <span class="segno">+</span></button>
+        <div class="faq-a"><p>A tutti: da chi si avvicina all'Islam per la prima volta a chi desidera approfondire. I percorsi partono dalle basi e non richiedono conoscenze pregresse.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Le lezioni sono in italiano? <span class="segno">+</span></button>
+        <div class="faq-a"><p>Sì, tutti i corsi sono interamente in lingua italiana. I testi arabi vengono sempre traslitterati e tradotti per renderli accessibili a chiunque.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Come si svolgono i corsi? <span class="segno">+</span></button>
+        <div class="faq-a"><p>I corsi sono 100% online, con lezioni dal vivo e materiale registrato accessibile in qualsiasi momento, da qualunque parte del mondo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Serve un abbonamento? <span class="segno">+</span></button>
+        <div class="faq-a"><p>Puoi scegliere il singolo percorso o un abbonamento che dà accesso a più corsi. Sono disponibili opzioni flessibili e agevolazioni. Contattaci per i dettagli.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -452,6 +533,7 @@
           <li><a href="escatologia.html">Escatologia islamica e religioni comparate</a></li>
           <li><a href="surah-kahf.html">Surah Kahf SPECIAL</a></li>
           <li><a href="sistema-politico.html">Sistema politico dell'Islam</a></li>
+          <li><a href="musulmano-intellettuale.html">Musulmano Intellettuale</a></li>
         </ul>
       </div>
       <div>
@@ -474,7 +556,7 @@
     </div>
     <div class="basso">
       <span>© 2026 Lume Musulmano. Tutti i diritti riservati.</span>
-      <span><a href="#">Privacy</a> · <a href="#">Termini</a> · <a href="#">Cookie</a></span>
+      <span><a href="privacy.html">Privacy</a> · <a href="termini.html">Termini</a> · <a href="cookie.html">Cookie</a></span>
     </div>
   </div>
 </footer>
